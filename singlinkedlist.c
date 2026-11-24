@@ -28,6 +28,7 @@ int main (void){
 }
 
 node* create_node(){
+    print("test");
     int n = rand() % 20;
     node* nodey = malloc(sizeof(node));
     nodey->value = n;
