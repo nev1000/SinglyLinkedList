@@ -1,4 +1,4 @@
-#import <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -43,6 +43,17 @@ node* push_end(node* nodey, node* head){
     }
     pointer->next = nodey;
     return head;
+}
+
+node* push_end(node** head, node* nodey){
+    if (*head == NULL){
+        *head = nodey;
+        return;
+    } node* pointer = *head;
+    while (pointer->next != NULL){
+        pointer = pointer->next;
+    }
+    pointer->next = nodey;
 }
 
 void free_list(node* head){
